@@ -38,7 +38,7 @@ tab1.newButton("Button", "Prints Hello!", function(state)
   end
   end)
 
-tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function(state)
+tab1.newToggle("Toggle", "Toggle! (prints the state)", false, function(state)
   getfenv().auto = (state and true or false)
   wait(1)
   workspace.Gravity = getfenv().grav
@@ -56,7 +56,7 @@ tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function(state)
   car:PivotTo(workspace:FindFirstChild("justapart").CFrame*CFrame.new(0,7,1000))
   local pos = workspace:FindFirstChild("justapart").CFrame*CFrame.new(0,7,-1000)
   repeat task.wait()
-    local speed =  getfenv().speed 
+    local speed =  getfenv().speed or 
     workspace.Gravity = 500
             car.PrimaryPart.Velocity = Vector3.new(car.PrimaryPart.Velocity.X,-100,car.PrimaryPart.Velocity.Z) 
     car:PivotTo(CFrame.new(car.PrimaryPart.Position,Vector3.new(pos.X,car.PrimaryPart.Position.Y,pos.Z)))
