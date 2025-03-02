@@ -20,4 +20,6 @@ local response = KeySystem:Init({
 })
 
 if not response or not KeyValid then return end
--- HERE YOUR SCRIPT
+if KeyValid then
+	local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/zuqorl/CDTStormb-ta/refs/heads/main/Drop.lua"))()
+	
