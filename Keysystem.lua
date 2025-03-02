@@ -19,7 +19,8 @@ local response = KeySystem:Init({
 	GuiParent = game.CoreGui, -- <object or nil> :3
 })
 
-if not response or not KeyValid then return end
+if not response or not KeyValid then return 
 if KeyValid then
 	local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/zuqorl/CDTStormb-ta/refs/heads/main/Drop.lua"))()
+	end
 	
