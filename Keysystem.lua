@@ -10,8 +10,6 @@ local response = KeySystem:Init({
 	Verify=function(key) -- <function> Verify is key valid
 		if key=="102930192021" then
       KeyValid=true
-		if key=="110930192021" then
-      KeyValid=true
 			return true
 		else
 			return false
