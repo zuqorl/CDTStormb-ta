@@ -5,11 +5,12 @@ local response = KeySystem:Init({
 	Debug=false, -- <bool> Prints some output in console when true
 	Title="CDTStorm bêta", -- <string or nil> Title of key system
 	Description="Hi and welcome to CDTStorm bêta", -- <string or nil> Description of key system
-	Link="https://discord.gg/c5dePr9f", -- <string> String to get key
 	Discord="https://discord.gg/c5dePr9f", -- <string or nil> Button to join your discord server
-	SaveKey=false, -- <bool or nil> Just auto save key
+	SaveKey=True, -- <bool or nil> Just auto save key
 	Verify=function(key) -- <function> Verify is key valid
-		if key=="1234" then
+		if key=="102930192021" then
+      KeyValid=true
+		if key=="110930192021" then
       KeyValid=true
 			return true
 		else
@@ -21,6 +22,6 @@ local response = KeySystem:Init({
 
 if not response or not KeyValid then return end
 if KeyValid then
-	local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/zuqorl/CDTStormb-ta/refs/heads/main/test.lua"))()
+	local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/zuqorl/CDTStorm/refs/heads/main/template.lua"))()
 	end
 	
