@@ -64,8 +64,20 @@ tab1.newToggle("Toggle", "Toggle! (prints the state)", false, function(state)
     car.PrimaryPart.AssemblyLinearVelocity = car.PrimaryPart.CFrame.LookVector*speed
     car.PrimaryPart.Velocity = Vector3.new(car.PrimaryPart.Velocity.X,-100,car.PrimaryPart.Velocity.Z) 
   until game.Players.LocalPlayer:DistanceFromCharacter(Vector3.new(pos.X,pos.Y,pos.Z)) < 200 or getfenv().test == false
-  end
-  end)
+
+
+local acceleration = 50  -- Adjust this value to control how fast it accelerates
+local maxSpeed = 1000    -- You can set a maximum speed to prevent unlimited acceleration
+local currentSpeed = 0    -- Initialize current speed
+
+-- Inside your loop or function where you update velocity
+function updateVelocity()
+    if currentSpeed < maxSpeed then
+        currentSpeed = math.min(currentSpeed + acceleration * wait(), maxSpeed)  -- Increase speed
+    end
+    PrimaryPart.Velocity = Vector3.new(car.PrimaryPart.Velocity.x, PrimaryPart.Velocity.y, currentSpeed)
+end
+    end)
 tab1.newInput("Input", "Prints your input.", function(text)
     print("Entered text in Tab 1: " .. text)
 end)
