@@ -69,6 +69,14 @@ tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function(state)
 tab1.newInput("Input", "Prints your input.", function(text)
     print("Entered text in Tab 1: " .. text)
 end)
+tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function(A)
+Farm = A
+
+while A do
+-- farming loop logic
+end
+
+end)
 
 -- Create the second tab with a different image ID
 local tab2 = DrRayLibrary.newTab("Tab 2", "ImageIdLogoHere")
