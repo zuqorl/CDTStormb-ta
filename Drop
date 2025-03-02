@@ -1,1 +1,1 @@
-local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/zuqorl/CDTStormb-ta/refs/heads/main/Ui.lua"))():MakePrototypeLibrary("Asra UI")
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/zuqorl/CDTStormb-ta/refs/heads/main/Ui.lua"))():MakePrototypeLibrary("CDTStorm bêta")
