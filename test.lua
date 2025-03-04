@@ -78,17 +78,10 @@ function updateVelocity()
     PrimaryPart.Velocity = Vector3.new(car.PrimaryPart.Velocity.x, PrimaryPart.Velocity.y, currentSpeed)
 end
     end)
-tab1.newInput("Input", "Prints your input.", function(text)
-    print("Entered text in Tab 1: " .. text)
+tab1.newInput("Test", "Prints your input.", function(text)
+    print("TESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSST " .. text)
 end)
-tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function(A)
-Farm = A
 
-while A do
--- farming loop logic
-end
-
-end)
 
 -- Create the second tab with a different image ID
 local tab2 = DrRayLibrary.newTab("Tab 2", "ImageIdLogoHere")
